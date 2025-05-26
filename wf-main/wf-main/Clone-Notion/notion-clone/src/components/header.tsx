@@ -5,58 +5,35 @@ import { ThemeToggle } from "./theme-toggle"
 
 export default function Header() {
   return (
-    <header className="sticky top-0 z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md border-b border-gray-100 dark:border-gray-800">
+    <header className="sticky top-0 z-50 bg-white/80 dark:bg-gradient-to-br dark:from-gray-950 dark:via-gray-900 dark:to-blue-900 backdrop-blur-md border-b border-gray-100 dark:border-blue-900">
       <div className="container mx-auto px-4 py-3">
         <div className="flex items-center justify-between">
-          {/* Logo */}
+          {/* Logo/Brand Name */}
           <div className="flex items-center space-x-8">
             <div className="flex items-center space-x-2">
-              <img
-                src="https://ext.same-assets.com/3422522520/322207032.svg"
-                alt="Notion"
-                className="h-8 w-8"
-              />
+              <span className="text-xl font-bold text-gray-900 dark:text-gray-100">WorkFlow</span>
             </div>
-
-            {/* Navigation Links */}
-            <nav className="hidden md:flex items-center space-x-6">
-              <Link href="/product" className="text-sm font-medium text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-100 transition-colors">
-                Product
-              </Link>
-              <a href="#" className="text-sm font-medium text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-100 transition-colors flex items-center">
-                Mail
-                <span className="ml-1 px-1.5 py-0.5 text-xs bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-md font-medium">
-                  New
-                </span>
-              </a>
-              <a href="#" className="text-sm font-medium text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-100 transition-colors">
-                Calendar
-              </a>
-              <a href="#" className="text-sm font-medium text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-100 transition-colors">
-                AI
-              </a>
-              <a href="#" className="text-sm font-medium text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-100 transition-colors">
-                Enterprise
-              </a>
-              <Link href="/pricing" className="text-sm font-medium text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-100 transition-colors">
-                Pricing
-              </Link>
-            </nav>
           </div>
 
-          {/* Search and CTA Buttons */}
+          {/* Search, Notifications, Profile, Theme Toggle */}
           <div className="flex items-center space-x-3">
             <Search />
+            {/* Notifications Bell */}
+            <button className="relative p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-gray-600 dark:text-gray-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+              </svg>
+              <span className="absolute top-0 right-0 block h-2 w-2 rounded-full ring-2 ring-white dark:ring-gray-900 bg-red-500"></span>
+            </button>
+            {/* User Profile Dropdown (placeholder) */}
+            <div className="relative">
+              <button className="flex items-center space-x-2 p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none">
+                <img src="https://ui-avatars.com/api/?name=WF" alt="Profile" className="h-7 w-7 rounded-full" />
+                <span className="hidden md:inline text-sm font-medium text-gray-700 dark:text-gray-300">Profile</span>
+              </button>
+              {/* Dropdown would go here */}
+            </div>
             <ThemeToggle />
-            <Button variant="ghost" size="sm" className="hidden md:inline-flex text-sm">
-              Request a demo
-            </Button>
-            <Button variant="ghost" size="sm" className="hidden md:inline-flex text-sm">
-              Log in
-            </Button>
-            <Button size="sm" className="bg-black hover:bg-gray-800 dark:bg-white dark:text-black dark:hover:bg-gray-200 text-white text-sm px-4">
-              Get Notion free
-            </Button>
           </div>
         </div>
       </div>

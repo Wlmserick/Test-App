@@ -6,80 +6,40 @@ export default function SearchSection() {
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Find anything with one search.
+            AI-powered search for your work.
           </h2>
           <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-            Search across your company knowledge and apps, right inside Notion.
+            Instantly find notes, tasks, and files—WorkFlow searches everything you create, all in one place.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button size="lg" className="bg-black hover:bg-gray-800 text-white px-8">
-              Try for free
+              Try WorkFlow free
             </Button>
             <Button variant="outline" size="lg" className="px-8">
-              Request a demo
+              See how it works
             </Button>
           </div>
         </div>
 
-        {/* Integration logos */}
+        {/* Personal integrations grid (Notion-style) */}
         <div className="mb-12">
-          <h3 className="text-lg font-semibold text-gray-900 mb-6 text-center">Integrates with</h3>
-          <div className="grid grid-cols-3 md:grid-cols-7 gap-8 items-center justify-items-center">
+          <h3 className="text-lg font-semibold text-gray-900 mb-6 text-center">Connect your favorite tools</h3>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-items-center">
             <div className="flex flex-col items-center space-y-2">
-              <img
-                src="https://ext.same-assets.com/3422522520/849522504.png"
-                alt="Slack"
-                className="w-12 h-12 rounded-lg"
-              />
-              <span className="text-sm text-gray-600">Slack</span>
-            </div>
-            <div className="flex flex-col items-center space-y-2">
-              <img
-                src="https://ext.same-assets.com/3422522520/849522504.png"
-                alt="Google Drive"
-                className="w-12 h-12 rounded-lg"
-              />
+              <img src="/icons/google-drive.svg" alt="Google Drive" className="w-12 h-12 rounded-lg bg-white shadow" />
               <span className="text-sm text-gray-600">Google Drive</span>
             </div>
             <div className="flex flex-col items-center space-y-2">
-              <img
-                src="https://ext.same-assets.com/3422522520/849522504.png"
-                alt="GitHub"
-                className="w-12 h-12 rounded-lg"
-              />
-              <span className="text-sm text-gray-600">GitHub</span>
+              <img src="/icons/notion.svg" alt="Notion" className="w-12 h-12 rounded-lg bg-white shadow" />
+              <span className="text-sm text-gray-600">Notion</span>
             </div>
             <div className="flex flex-col items-center space-y-2">
-              <img
-                src="https://ext.same-assets.com/3422522520/849522504.png"
-                alt="Jira"
-                className="w-12 h-12 rounded-lg"
-              />
-              <span className="text-sm text-gray-600">Jira</span>
+              <img src="/icons/calendar.svg" alt="Calendar" className="w-12 h-12 rounded-lg bg-white shadow" />
+              <span className="text-sm text-gray-600">Calendar</span>
             </div>
             <div className="flex flex-col items-center space-y-2">
-              <img
-                src="https://ext.same-assets.com/3422522520/849522504.png"
-                alt="MS Teams"
-                className="w-12 h-12 rounded-lg"
-              />
-              <span className="text-sm text-gray-600">MS Teams</span>
-            </div>
-            <div className="flex flex-col items-center space-y-2">
-              <img
-                src="https://ext.same-assets.com/3422522520/849522504.png"
-                alt="SharePoint"
-                className="w-12 h-12 rounded-lg"
-              />
-              <span className="text-sm text-gray-600">SharePoint</span>
-            </div>
-            <div className="flex flex-col items-center space-y-2">
-              <img
-                src="https://ext.same-assets.com/3422522520/849522504.png"
-                alt="OneDrive"
-                className="w-12 h-12 rounded-lg"
-              />
+              <img src="/icons/onedrive.svg" alt="OneDrive" className="w-12 h-12 rounded-lg bg-white shadow" />
               <span className="text-sm text-gray-600">OneDrive</span>
             </div>
           </div>
